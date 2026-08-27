@@ -1,5 +1,8 @@
+#-----------------------------------------------------------------------------------------------------------------------
+
 # ex1
 print("ex1")
+
 dispo = (1000-673)
 print("bande passante dispo:", dispo, "Mbps")
 utilisation = (673*100/1000)
@@ -10,6 +13,7 @@ print(" ")
 
 # ex2
 print("ex2")
+
 print("100Mbps=", 100/8, "MB/s")
 print(" ")
 
@@ -46,6 +50,8 @@ print(" ")
 #ex4
 print("ex4")
 
+#variables
+
 p1 = (80)
 p2 = (65535)
 p3 = (70000)
@@ -56,17 +62,31 @@ p5 = (22)
 
 res1 = (p1 <= 65535
        and p1 >= 0)
-print(res1)
 res2 = (p2 <= 65535
         and p2 >= 0)
-print(res2)
 res3 = (p3 <= 65535
         and p3 >= 0)
-print(res3)
 res4 = (p4 <= 65535
         and p4 >= 0)
-print(res4)
 res5 = (p5 <= 65535
         and p5 >= 0)
-print(res5)
-print(" ")
+
+#print "valide" ou "invalide"
+
+if res1 == True:
+    print("Valide")
+else: print("Invalide")
+if res2 == True:
+    print("Valide")
+else: print("Invalide")
+if res3 == True:
+    print("Valide")
+else: print("Invalide")
+if res4 == True:
+    print("Valide")
+else: print("Invalide")
+if res5 == True:
+    print("Valide")
+else: print("Invalide")
+
+#-----------------------------------------------------------------------------------------------------------------------
