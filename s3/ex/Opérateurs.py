@@ -34,6 +34,7 @@ print(r6)
 print(l)
 
 r7 = (a + c > b) and (b-5<c or a*3==6)
+print(r7)
 print(l)
 
 r8 = not(a**2+b>12) or (c+3<=b and a<c)
@@ -48,3 +49,7 @@ B=8
 r9 = 3+B>19-A or 5<4 and 18<15 or 7>4
 print(r9)
 print(l)
+
+#Partie 2
+
+print("2+3= ", 2+3)
