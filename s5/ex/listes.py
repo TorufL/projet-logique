@@ -1,0 +1,10 @@
+temp = [18,21,19,23,22,20]
+print(len(temp))
+print(temp[0])
+print(temp[-1])
+print(temp[2])
+print(temp[:3])
+print(temp[3:])
+print(max(temp))
+print(min(temp))
+print([18,21,19]==[19,21,18])
