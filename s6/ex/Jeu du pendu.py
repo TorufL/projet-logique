@@ -16,7 +16,7 @@ def afficher_mot(mot_cache):
     """
     Affiche l’état actuel du mot (avec lettres et tirets bas).
 
-    :param mot_cache: mot caché avec lettres et tirets
+    :param mot_cache: Mot caché avec lettres et tirets
     :return: None
     """
     print(" ".join(mot_cache))
@@ -32,7 +32,7 @@ def demander_lettre(lettres_tentees):
     while True:
         lettre = input("Entre une lettre : ")
 
-        if len(lettre) != or not lettre.insalpha():
+        if len(lettre) !=1 or not lettre.isalpha():
             print("wawa")
         elif lettre in lettres_tentees:
             print(f"efwefwef:{lettre}")
@@ -50,7 +50,7 @@ def maj_mot_cache(mot_secret, mot_cache, lettre):
     :param lettre: La lettre trouvée
     :return: None
     """
-    for i in range(len(mot_cache)):
+    for i in range(len(mot_secret)):
         if mot_secret[i] == lettre:
             mot_cache[i] = lettre
 
@@ -82,7 +82,7 @@ def mot_trouve(mot_cache):
     """
     Retourne True si le mot est entièrement découvert.
 
-    :param mot_cache: mot caché
+    :param mot_cache: Mot caché
     :return: True si le mot est découvert, False sinon
     """
     return "_" not in mot_cache
@@ -92,12 +92,12 @@ def jouer():
     """
     Boucle principale du jeu du pendu.
     """
-    liste_mots = ["python", "programmation", "ordinateur", "pendu", "liste", "etudiant", "allo", "bonjour", "cegep"]
+    liste_mots = ["python", "programmation", "ordinateur", "pendu", "liste", "etudiant", "allo", "bonjour", "cegep", "anticonstitutionellement"]
 
     mot_secret = choisir_mot(liste_mots)
     mot_cache = ["_"] * len(mot_secret)
     lettres_tentees = []
-    vies = 3*len(mot_secret)
+    vies = 7
 
     print("🎮 Bienvenue au jeu du pendu ! 🎮")
     print("Devine le mot secret :")
@@ -115,7 +115,7 @@ def jouer():
             lettres_tentees.append(lettre)
         vies = verifier_lettre(mot_cache, mot_secret, lettre, vies)
 
-        print(f"Mot actuel: {mot_cache}")
+        print(f"Mot actuel: {' ' .join(mot_cache)}")
         print(f"Lettres tentées: {lettres_tentees}")
 
 
